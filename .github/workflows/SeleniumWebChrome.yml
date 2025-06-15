@@ -47,7 +47,7 @@ jobs:
       
       
     - name: Test Project 3
-       env:
+      env:
         CHROMEWEBDRIVER: /usr/bin/google-chrome
       run:  |
        echo "Running TestProject3 tests"
