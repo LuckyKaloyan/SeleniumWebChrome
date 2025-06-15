@@ -16,8 +16,7 @@ namespace TestProject3
         [SetUp]
         public void SetUp()
         {
-    
-            driver = new ChromeDriver();
+
             options = new ChromeOptions();
             options.AddArgument("--headless");
             options.AddArgument("--no-sandbox");
