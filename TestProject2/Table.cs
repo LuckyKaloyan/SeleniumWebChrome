@@ -19,9 +19,6 @@ namespace TestProject2
             options.AddArgument("--no-sandbox");
             options.AddArgument("--disable-dev-shm-usage");
             driver = new ChromeDriver(options);
-            driver = new ChromeDriver();
-
-            // Add implicit wait
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
         }
 
