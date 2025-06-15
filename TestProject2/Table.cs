@@ -9,11 +9,16 @@ namespace TestProject2
     public class WorkingWithWebTable
     {
         IWebDriver driver;
+        ChromeOptions options;
 
         [SetUp]
         public void SetUp()
         {
-            // Create object of ChromeDriver
+                      options = new ChromeOptions();
+            options.AddArgument("--headless");
+            options.AddArgument("--no-sandbox");
+            options.AddArgument("--disable-dev-shm-usage");
+            driver = new ChromeDriver(options);
             driver = new ChromeDriver();
 
             // Add implicit wait
