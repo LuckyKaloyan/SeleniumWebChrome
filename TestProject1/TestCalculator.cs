@@ -22,8 +22,10 @@ namespace TestProject1
         public void SetUp()
         {
             options = new ChromeOptions();
-            options.AddArguments("headless");
-            driver = new ChromeDriver();
+                options.AddArgument("--headless");
+                options.AddArgument("--no-sandbox");
+                options.AddArgument("--disable-dev-shm-usage");
+            driver = new ChromeDriver(options);
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             driver.Url = "https://calculatorhtml.onrender.com/";
 
